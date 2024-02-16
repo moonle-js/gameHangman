@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222831;
+}
+.element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    background: #393E46;
+}
+    main{
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+/* Footer side */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55vh;
+}
+
+
+
+
+    footer #objectName, footer #status{
+        max-width: 200px;
+        width: 80%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #222831;
+        color: #00ADB5;
+        border-radius: 15px;
+    }
+    footer #objectName p, footer #status p{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    footer #letters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 80%;
+        height: 70%;
+        max-width: 800px;
+        background-color: #00ADB5;
+        border-radius: 15px;
+        padding: 10px;        
+    }
+        footer #letters .letterButton{
+            width: 70px;
+            cursor: pointer;
+            height: 70px;
+            background-color: #EEEEEE;
+            color: #393E46;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        @media screen and (max-width: 700px){
+            main{
+                height: 40vh;
+            }
+            footer{
+                height: 60vh;
+            }
+            footer #letters{
+                width: 90%;
+            }
+            footer #letters .letterButton{
+                width: 45px;
+                height: 45px;
+            }
+            img{
+                transform: scale(.8);
+            }
+        }
+
+
+        @media screen and (max-height: 700px){
+            main{
+                height: 40vh;
+            }
+            footer{
+                height: 60vh;
+            }
+            footer #letters{
+                width: 90%;
+            }
+            footer #letters .letterButton{
+                width: 40px;
+                height: 40px;
+            }
+            img{
+                transform: scale(.6);
+            }
+        }
+        @media screen and (max-width: 1000px ) and (orientation: landscape){
+            .element{
+                flex-direction: row;
+            }
+            main, footer{
+                width: 50%;
+                height: 90%;
+            }
+            footer #letters .letterButton{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        @media screen and (max-height: 380px) and (orientation: landscape){
+            .element{
+                flex-direction: row;
+            }
+            main, footer{
+                width: 50%;
+                height: vh;
+            }
+            footer #letters .letterButton{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+
+
+        #nameOf{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            letter-spacing: 10px;
+        }
+        .letterSpan {
+            background-color: rgba(255, 0, 0, 0);
+            color: rgba(255, 0, 0, 0);
+            cursor: not-allowed;
+            user-select: none;
+        }
+        
+        .letterSpan::after {
+            content: " ";
+            display: block;
+            height: 2px;
+            width: 10px;
+            align-self: center;
+            background-color: rgba(238, 238, 238, 1); /* Red color with full opacity */
+        }
